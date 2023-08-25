@@ -1,0 +1,27 @@
+﻿@model PetModel 
+@{
+    ViewData["Title"] = "Adicionar Pets";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Adicionar Pet</h1>
+</div>
+    <form asp-controller="Pet" asp-action="Criar" method="post">
+        <div class="form-group">
+            <label for="nome">Nome</label>
+            <input type="text" asp-for="Nome"  class="form-control" placeholder="Insira o Nome">
+        </div>
+        <div class="form-group">
+             <label for="raca">Raça</label>
+        <input type="text" asp-for="Raca" class="form-control" placeholder="Insira a Raça">
+        </div>
+        <div class="form-group">
+             <label for="genero">Gênero</label>
+        <input type="text" asp-for="Genero" class="form-control" placeholder="Insira o Gênero">
+       </div>
+       <br>
+        <button type="submit" class="btn btn-primary">Cadastrar</button>
+        <a role="button" class="btn btn-secondary" asp-controller="Pet" asp-action="Index">Voltar</a>
+    </form>
+
+     
